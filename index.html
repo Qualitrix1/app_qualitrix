@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualitrix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside>
+        <div class="logo-area">QUALI<span>TRIX</span></div>
+        <nav>
+            <div onclick="toggleSubmenu('sub_estrat')" class="nav-item">
+                <span><i class="fas fa-chess-knight"></i> Estratégia</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </div>
+            <ul id="sub_estrat" class="submenu">
+                <li>Contexto e SWOT</li>
+                <li>Gestão de Riscos</li>
+            </ul>
+
+            <div onclick="toggleSubmenu('sub_proc')" class="nav-item">
+                <span><i class="fas fa-project-diagram"></i> Processos</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </div>
+            <ul id="sub_proc" class="submenu">
+                <li>Fluxogramas</li>
+                <li>Indicadores (KPIs)</li>
+            </ul>
+
+            <div onclick="toggleSubmenu('sub_docs')" class="nav-item">
+                <span><i class="fas fa-folder-open"></i> Documentos</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </div>
+            <ul id="sub_docs" class="submenu">
+                <li>Lista Mestra</li>
+                <li>Registros</li>
+                <li>Consulta Pública</li>
+            </ul>
+
+            <div onclick="toggleSubmenu('sub_recursos')" class="nav-item">
+                <span><i class="fas fa-tools"></i> Suporte</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </div>
+            <ul id="sub_recursos" class="submenu">
+                <li>Treinamentos</li>
+                <li>Calibrações</li>
+                <li>Manutenção</li>
+            </ul>
+
+            <div onclick="toggleSubmenu('sub_relac')" class="nav-item">
+                <span><i class="fas fa-handshake"></i> Relacionamento</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </div>
+            <ul id="sub_relac" class="submenu">
+                <li>Fornecedores</li>
+                <li>Satisfação de Clientes</li>
+            </ul>
+
+            <div onclick="toggleSubmenu('sub_melhoria')" class="nav-item">
+                <span><i class="fas fa-sync-alt"></i> Melhoria</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </div>
+            <ul id="sub_melhoria" class="submenu">
+                <li>Auditorias</li>
+                <li>Não Conformidades (RNC)</li>
+            </ul>
+
+            <div class="nav-item">
+                <span><i class="fas fa-sliders-h"></i> Configurações</span>
+            </div>
+        </nav>
+        <div style="padding: 20px; font-size: 0.65rem; color: #cbd5e1; text-align: center;">v1.2.0</div>
+    </aside>
+
+    <main>
+        <header>
+            <div class="page-title">Visão Geral</div>
+
+            <div class="header-right">
+                <div class="search-bar">
+                    <i class="fas fa-search" style="color: #94a3b8; font-size: 0.8rem;"></i>
+                    <input type="text" placeholder="Buscar no portal...">
+                </div>
+                
+                <i class="far fa-bell" style="color: #64748b; cursor: pointer;"></i>
+
+                <div class="user-block">
+                    <div class="user-text">
+                        <span class="user-name">Carlos Silva</span>
+                        <span class="user-role">Adm. Qualidade</span>
+                    </div>
+                    <div class="avatar-box">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="card">
+                <h3>Dashboard de Gestão</h3>
+                <p style="margin-top: 10px; color: #64748b; font-size: 0.85rem;">
+                    Selecione um módulo no menu lateral para gerenciar os processos de conformidade.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            Qualitrix Digital &bull; Gestão & Processos &bull; 2026
+        </footer>
+    </main>
+
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            const isVisible = submenu.style.display === "block";
+            
+            // Comportamento "Acordeão": fecha outros menus ao abrir um novo
+            document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+            
+            if (!isVisible) {
+                submenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
